@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>2018</title>
+  <script src="lib/jquery-2.0.3.js"></script>  
+  <script src="lib/marked.js"></script>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>      
+    <div class="container">
+        <div id="markdown_content" src="./text.md"> </div>
+    </div>
+  <script>
+    $(document).ready(function(){
+        var target = $("#markdown_content");
+        $.ajax({
+            url: target[0].attributes["src"].value+"?"+Math.random(),
+        }).success(function(data){
+            target.append(marked(data));
+            console.log(data);
+        }).error(function(data){
+            target.append("This content failed to load.");
+        });
+    });
+  </script>
+</body>
+</html>

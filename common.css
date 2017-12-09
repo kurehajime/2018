@@ -1,0 +1,26 @@
+container{
+    border: 1px solid #aaa;
+    position: relative;
+}
+#markdown_content {
+    position: absolute;
+    margin: auto;
+
+    height: 874px;
+    width: 590px;
+    border: solid 3px #000000;
+    padding: 50px;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;    
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+  }
+  #markdown_content img{
+    position: absolute;    
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;    
+  }
